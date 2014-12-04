@@ -7,7 +7,7 @@ simple javascript pagination
 
 ```bash
 # use bower
-$ bower install simple-pagination --save
+$ bower install simple-javascript-pagination --save
 ```
 
 # Example #
