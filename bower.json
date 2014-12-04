@@ -1,0 +1,24 @@
+{
+  "name": "simple-pagination",
+  "version": "0.1.0",
+  "homepage": "https://github.com/wahaha2012/simple-pagination",
+  "authors": [
+    "wxwdesign <wxwdesign@gmail.com>"
+  ],
+  "description": "simple javascript pagination",
+  "main": "pagination.js",
+  "keywords": [
+    "simple",
+    "javascript",
+    "pagination",
+    "page"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
