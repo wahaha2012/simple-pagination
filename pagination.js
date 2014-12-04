@@ -23,9 +23,9 @@
          * @return {Object}        pagination data processed
          */
         getPages: function(config) {
-            var totalRecords = this.getInt(config.totalRecords),
-                pageSize = this.getInt(config.pageSize),
-                currentPage = this.getInt(config.currentPage),
+            var totalRecords = getInt(config.totalRecords),
+                pageSize = getInt(config.pageSize),
+                currentPage = getInt(config.currentPage),
                 pagerData = {
                     totalRecords: totalRecords,
                     currentPage: currentPage,
@@ -99,17 +99,18 @@
             }
 
             return pagerData;
-        },
-        getInt: function(n) {
-            var m = parseInt(n, 10);
-
-            if (isNaN(m)) {
-                throw new Error(n + " cann't be parse to integer!");
-            }
-
-            return m;
         }
     };
+
+    function getInt(n) {
+        var m = parseInt(n, 10);
+
+        if (isNaN(m)) {
+            throw new Error(n + " cann't be parse to integer!");
+        }
+
+        return m;
+    }
 
 
     if (typeof define === 'function' && define.amd) {
