@@ -23,9 +23,9 @@
          * @return {Object}        pagination data processed
          */
         getPages: function(config) {
-            var totalRecords = getInt(config.totalRecords),
-                pageSize = getInt(config.pageSize),
-                currentPage = getInt(config.currentPage),
+            var totalRecords = getInt(config.totalRecords, 'totalRecords'),
+                pageSize = getInt(config.pageSize, 'pageSize'),
+                currentPage = getInt(config.currentPage, 'currentPage'),
                 pagerData = {
                     totalRecords: totalRecords,
                     currentPage: currentPage,
@@ -102,11 +102,11 @@
         }
     };
 
-    function getInt(n) {
+    function getInt(n, name) {
         var m = parseInt(n, 10);
 
         if (isNaN(m)) {
-            throw new Error(n + " cann't be parse to integer!");
+            throw new Error(name + '(' + n + ") cann't be parse to integer!");
         }
 
         return m;
